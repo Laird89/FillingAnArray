@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class fillAnArray{
+	public static void main(String[] args){
+		//creating a scanner
+		Scanner input = new Scanner(System.in);
+		
+		int[] numbers = new int[6];
+		String output = "";
+		
+		for(int i = 0; i < numbers.length; i++){
+			//having user input a number
+			System.out.print("Enter a number between 30 and 90: ");
+			int userInput = input.nextInt();
+		
+			//check if input is out of range
+			if (drive.numberOutOfRange(userInput)){
+				while(drive.numberOutOfRange(userInput)){
+				System.out.print("your number is out of range");
+				System.out.print("\nEnter a number between 30 and 90: ");
+				userInput = input.nextInt();
+				}
+			}
+			
+			//check if number is repeated
+			if (drive.numberExists(numbers,userInput)){
+				while(drive.numberExists(numbers,userInput)){
+				System.out.print(userInput + " is a repeat! Not accepted");
+				System.out.print("\nEnter a number between 30 and 90: ");
+				userInput = input.nextInt();
+				}
+			}
+
+			//add value to array
+			numbers[i] = userInput;
+			
+			//add array index values to output
+			output+= numbers[i] + " ";
+					
+			//print final outpur
+			System.out.println(output);
+		}
+		
+	
+	}
+	
+	
+}
+
